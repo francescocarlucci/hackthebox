@@ -1,0 +1,7 @@
+- a quick social media check reveals the Twitter profile of Frank: https://twitter.com/frankvitalik
+- scanning the QR code brings us on https://steemit.com/htb/@freecoinz/freecoinz
+- the comment suggest the look into https://ropsten.etherscan.io/
+- search the Ethereum address (0x1b3247Cd0A59ac8B37A922804D150556dB837699) on ropsten
+- browse the transactions
+- get flag in HEX (0x4854427b43727950743043757272336e63795f31735f46754e7a21217d)
+- convert to string
