@@ -1,0 +1,4 @@
+- anonymous FTP itself is not exploitable, but combined with other feature (a web service in this case) can be powerful and dangerous
+- msfvenom is your friend to create payloads
+- metasploit has a *very useful* local exploit suggester
+- when a payload or exploit does not work, double-check the options

