@@ -1,0 +1,1 @@
+- try to migrate meterpreter to other process if no user is assigned on the system

