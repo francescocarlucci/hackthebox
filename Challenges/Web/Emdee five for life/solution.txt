@@ -1,0 +1,5 @@
+The page asks to encrypt a given string by submitting a form, fast!
+
+Submit programmatically (via script) to get the flag.
+
+Be careful to include the session cookie which seems to be binded to the given string to encrypt.
