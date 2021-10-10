@@ -1,0 +1,2 @@
+- always look at cookies when interacting with a web page, as it could set a session
+- store cookies and use cookies have different flags in bash
